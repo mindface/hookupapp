@@ -1,0 +1,239 @@
+@import '../../core/styles/_mixin';
+
+.contents-box
+  width: 100%
+  &__header
+    padding: 10px 0 60px
+
+.classter
+  &__data-structure
+    max-width: 320px
+    width: 100%
+    padding: 0 0 0 40px
+
+.post-card
+  &-box
+    width: 100%
+  &-classter
+    &__header
+      position: absolute
+      z-index: 10
+      top: 60px
+      right: 20px
+      max-width: 480px
+      width: 100%
+      background-color: rgba(3,14,33,0.8)
+    &-state
+      color: #00fbfc
+      max-width: 960px
+      margin: 0 auto
+      .structure
+        &__title
+          font-size: 2.4rem
+          line-height: 1.7
+          &::before
+            content: ""
+            position: absolute
+            top: 160px
+            left: -100px
+            width: 412px
+            height: 76px
+            background-image: url(../images/state_header_item.png)
+            background-size: 100%
+            background-repeat: no-repeat
+            transform: rotate(90deg)
+        &__number
+          max-width: 190px
+          .feedback-number
+            position: relative
+            padding: 24px 0 0
+            border-bottom: 1px solid #00fbfc
+            &::after
+              content: ""
+              position: absolute
+              right: 0
+              bottom: 0
+              display: inline-block
+              height: 24px
+              width: 86px
+              background-image: url(../images/box_parts.png)
+              background-size: 100%
+              background-repeat: no-repeat
+            .number
+              padding: 0 0 0 30px
+              font-size: 4.6rem
+            .text
+              position: absolute
+              top: 10%
+              left: 100%
+              width: 140px
+              font-size: 1.4rem
+
+          .total-task
+            position: relative
+            padding: 10px 0 140px
+            .number-aid
+              position: absolute
+              top: 0
+              left: 0
+              font-size: 1.6rem
+            .number
+              font-size: 3.4rem
+              text-align: right
+              .aid
+                display: inline-block
+                padding: 0 10px 0 0
+                font-size: 1.2rem
+                color: #00fbfc
+
+          .number
+            color: #fff
+
+      .classification
+        &-list
+          .title
+            position: relative
+            padding: 0 0  24px
+            font-size: 1.6rem
+            color: #fff
+            &::before
+              content: ""
+              position: absolute
+              top: 8px
+              right: 100%
+              height: 1px
+              width: 50vw
+              background-color: #fff
+        &-item
+          padding: 0 0 80px
+          .graph-box
+            position: relative
+            .number
+              position: absolute
+              top: 10px
+              font-size: 2rem
+              color: #fff
+              &._0
+                right: 110%
+              &._100
+                left: 105%
+            .graph
+              position: relative
+              height: 30px
+              border: 1px solid #00fbfc
+              transform: skewX(-30deg)
+              &-item
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 30%
+                background-color: #00fbfc
+               
+.classter
+  &__data
+    max-width: calc(100% - 320px)
+    width: 100%
+    padding: 0 0 30px
+    .cards-box
+      &__body
+        .caption
+          position: relative
+          margin: 0 0 20px
+          padding: 80px 0 10px
+          font-size: 1.6rem
+          color: #fff
+          border-bottom: 1px solid #00fbfc
+          .aid
+            position: absolute
+            right: 0
+            bottom: -25px
+        .post-card
+          position: relative
+          min-width: 390px
+          margin: 0 30px 40px 20px
+          padding: 10px
+          &::before,
+          &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            display: inline-block
+            height: 100%
+            width: 100%
+            border: 1px solid #00fbfc
+          &::before
+            transform: translate(-5px,5px)
+          &::after
+            transform: translate(5px,-5px)
+          .card-face
+            position: relative
+            z-index: 1
+            background-color: #030e21            
+          &-block
+            width: 100%
+            padding: 20px 0 0
+            &._flex_
+              flex-wrap: nowrap
+          &-blocks
+            position: relative
+            overflow-x: scroll
+            @include scrollerStyler()
+            .mean-detail
+              position: absolute
+              right: 0
+              bottom: calc(100% + 10px)
+              border-bottom: 1px solid #00fbfc
+              font-size: 1.6rem
+              color: #fff
+              .aid
+                display: inline-block
+                min-width: 240px
+                text-align: right
+            
+          &__title
+            padding: 0 0 10px
+            font-size: 1.6rem
+            color: #00fbfc
+            font-weight: bold
+            &::before
+              position: absolute
+              top: 4px
+              left: 0
+              height: 30px
+              width: 40px
+              background-image: url(../images/card_icon.png)
+              background-size: 100%
+              background-repeat: no-repeat
+
+          &__category
+              display: inline-block
+              padding: 4px
+              border: 1px solid #fff
+              color: #fff
+
+          &__btn
+            /deep/ .post-card__actions
+              position: absolute
+              top: 0
+              left: 0
+              width: 100%
+              height: 100%
+              transition: box-shadow 0.3s
+              &:hover
+                box-shadow: 0 0 0 10px rgba(255,255,255,0.6) inset
+                
+              .event-icon
+                i
+                  opacity: 0
+            /deep/ .event-icon
+              position: absolute
+              top: 0
+              left: 0
+              height: 100%
+              width: 100%
+
+/deep/ .post-card-box
+  padding: 40px 0 0
+  

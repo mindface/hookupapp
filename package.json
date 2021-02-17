@@ -1,0 +1,13 @@
+{
+  "name": "vue_py",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^11.2.1",
+    "sqlite3": "^5.0.1"
+  }
+}
