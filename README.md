@@ -1,6 +1,6 @@
 # hookupapp
 
-electron 検索拡充アプリ
+electron アプリ
 
 #### base
 - vue js 
