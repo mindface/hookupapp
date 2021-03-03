@@ -1,8 +1,3 @@
 # hookupapp
 
-electron アプリ
-
-#### base
-- vue js 
-
-
+検索補助アプリ

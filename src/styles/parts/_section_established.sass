@@ -1,0 +1,88 @@
+
+.established
+  padding: 0 15px
+  .content
+    &__lang
+      width: 100%
+      padding: 10px
+      background-color: $color-black
+      color: $color-white
+    &__image
+      display: none
+      width: 50%
+      padding: 10px
+      .text-box
+        position: relative
+        width: 100%
+        margin: 20px 0 80px
+        padding: 10px
+        border: 1px solid $color-black
+        line-height: 1.7
+        &::before
+          content: ""
+          position: absolute
+          top: calc(100% + 36px)
+          left: calc(50% + 5px)
+          width: 1px
+          height: 18px
+          background-color: $color-black
+          transform: translate(-50%,0%) rotate(45deg)
+        &::after
+          content: ""
+          position: absolute
+          top: calc(100% + 10px)
+          left: 50%
+          width: 1px
+          height: 40px
+          background-color: $color-black
+          transform: translate(-50%,0%)
+        .base
+          width: 50%
+    &__q-p
+      display: none
+    &__q-pattern
+      width: 50%
+    .q-p
+      &__item
+        padding: 5px
+        font-size: 1.4rem
+        cursor: pointer
+        &:hover
+          @include hoverAction()
+  input
+    display: none
+    &[id="q-lang"]
+      &:checked
+        ~ .content__q-p
+          display: block
+  input[id="q-image"]
+    &:checked
+      ~ .content__image
+        display: block
+
+  .label
+    position: relative
+    display: inline-block
+    padding: 10px 10px 10px 30px
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 10px
+      margin: auto
+    &::before
+      width: 12px
+      height: 12px
+      border: 1px solid $color-black
+    &::after
+      width: 8px
+      height: 5px
+      border-left: 1px solid $color-black
+      border-bottom: 1px solid $color-black
+      transition: transform 0.3s
+      transform: translate(2px, -3px) rotate(-45deg) scaleY(0)
+    &.active
+      &::after
+        transform: translate(2px, -3px) rotate(-45deg) scaleY(1)

@@ -1,0 +1,115 @@
+
+.contents
+  &--tab
+    .content
+      position: absolute
+      opacity: 0
+      transform: scale(0)
+      transition: opacity 0.3s
+      &__title
+        padding: 30px 0
+        text-align: right
+        .title
+          display: inline-block
+          .en
+            display: block
+            padding: 0 0 10px
+            font-size: 4rem
+            font-weight: bold
+            color: $color-gray
+      &__body
+        .item
+           padding: 10px 0
+           .title
+             position: relative
+             &::after
+               content: ""
+               position: absolute
+               top: calc(100% + 5px)
+               left: 5px
+               height: 40px
+               width: 1px
+               background-color: $color-gray
+        .text
+          margin: 10px 10px
+          padding: 10px
+          line-height: 1.7
+          border: 1px solid $color-gray
+          &-box
+            padding: 0 10px
+      
+.content
+  &__tab
+    position: relative
+    margin: 0 0 20px
+    padding: 10px 0 0
+    &::after
+      content: ""
+      position: absolute
+      left: 50%
+      bottom: 0
+      height: 1px
+      width: 100vw
+      background-color: $color-black
+      transform: translate(-50%,0)
+    .btn
+      position: relative
+      padding: 10px
+      background-color: $color-black
+      color: $color-white
+      &::after
+        position: absolute
+        left: calc(50% - 2px)
+        bottom: 4px
+        height: 6px
+        width: 6px
+        background-color: $color-white
+        @include loopRotation()
+
+[data-tab-box="1"]
+  [data-tab="1"]
+    &::after
+      content: ""
+  .contents
+    &--tab
+      .content
+        &.tab01
+          position: relative
+          opacity: 1
+          transform: scale(1)
+
+[data-tab-box="2"]
+  [data-tab="2"]
+    &::after
+      content: ""
+  .contents
+    &--tab
+      .content
+        &.tab02
+          position: relative
+          opacity: 1
+          transform: scale(1)
+
+[data-tab-box="3"]
+  [data-tab="3"]
+    &::after
+      content: ""
+  .contents
+    &--tab
+      .content
+        &.tab03
+          position: relative
+          opacity: 1
+          transform: scale(1)
+
+[data-tab-box="4"]
+  [data-tab="4"]
+    &::after
+      content: ""
+  .contents
+    &--tab
+      .content
+        &.tab04
+          position: relative
+          opacity: 1
+          transform: scale(1)
