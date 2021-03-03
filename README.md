@@ -13,18 +13,18 @@ http://compling.hss.ntu.edu.sg/wnja/
 
 データを以下のフォルダに配置してください。
 
-'''
+```
 ./middleware/aid/wnjpn.db
-'''
+```
 
 ### app start
 
-'''
+```
 yarn install
-'''
+```
 
-'''
+```
 yarn express # express起動
 yarn serve # web
 yarn electron:serve # electron
-'''
+```
